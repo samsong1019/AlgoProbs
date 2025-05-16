@@ -66,15 +66,40 @@
 //but the answer is 1
 //ok forgot to put conidition for the back
 
-let n = 2;
-let p = 1;
+
+
+// function pageCount(n, p) {
+//   // Write your code here
+//   let front;
+//   let backCalc = Math.floor((n - p) / 2);
+//   let backOneEnding = Math.ceil((n - p) / 2);
+//   let frontCalc = Math.floor(p / 2);
+//   if (n === 2 && p === 1){
+//     return 0
+//   }
+//   if (n % 2 !== 0) {
+//     front = Math.ceil(n / 2);
+//   } else {
+//     front = Math.floor(n / 2);
+//   }
+// // fixed problem when n-p=1 while n is even 
+//   if (p >= front && n - p === 1 && n % 2 === 0) {
+//     return backOneEnding;
+//   } else if (p >= front) {
+//     return backCalc;
+//   } else {
+//     return frontCalc;
+//   }
+// }
+
+let n = 5;
+let p = 2;
+// realised i dont need the variables silly me 
+
 
 function pageCount(n, p) {
   // Write your code here
   let front;
-  let backCalc = Math.floor((n - p) / 2);
-  let backOneEnding = Math.ceil((n - p) / 2);
-  let frontCalc = Math.floor(p / 2);
   if (n === 2 && p === 1){
     return 0
   }
@@ -85,13 +110,12 @@ function pageCount(n, p) {
   }
 // fixed problem when n-p=1 while n is even 
   if (p >= front && n - p === 1 && n % 2 === 0) {
-    return backOneEnding;
+    return Math.ceil((n - p) / 2);
   } else if (p >= front) {
-    return backCalc;
+    return Math.floor((n - p) / 2);
   } else {
-    return frontCalc;
+    return Math.floor(p / 2);
   }
 }
-
 pageCount(n, p);
 console.log(pageCount(n,p))
