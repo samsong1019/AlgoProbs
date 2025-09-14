@@ -29,10 +29,18 @@
 // The second line contains  distinct space-separated integers  where .
 // The third line contains  distinct space-separated integers  where .
 
-// Constraints
+//
 
+//first can find lcm
+// find gcd
+// count the numbers between the lcm and gcd that are multiples of lcm and factors of gcd
+// return that number
+
+let a = [2, 4];
+let b = [16, 32, 96];
 
 function getTotalX(a, b) {
     // Write your code here
+
 
 }
